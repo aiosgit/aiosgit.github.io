@@ -11,19 +11,23 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
-                font: normal normal normal larger Consolas, cursive;
+                font-family: Consolas, Monaco, monospace;
+                font-size: 1.23em;
             }
             h1 {
-                font-family: fantasy;
+                font-family: fantasy, Impact, 'Arial Narrow Bold';
             }
             h2 {
-                font-family: Georgia;
+                font-family: Georgia, serif;
             }
-            h4 {
+            h3 {
                 font-family: sans-serif;
             }
+            h4 {
+                font-family: Verdana, sans-serif;
+            }
             h5 {
-                font-family: cursive;
+                font-family: 'Comic Sans MS', cursive;
             }
             header {
                 background-color: whitesmoke;
@@ -66,7 +70,7 @@ and open the template in the editor.
                     var a = links[i];
                     if (a.href !== undefined && a.href !== '') {
                         if (a.href.indexOf('#') < 0 && a.href.indexOf("javascript:void") < 0
-                            && a.href.indexOf("mailto:") < 0 && a.target !== '_self') {
+                                && a.href.indexOf("mailto:") < 0 && a.target !== '_self') {
                             a.target = "_blank";
                         }
                         if (a.innerHTML === '' && a.className === '') {
@@ -85,31 +89,31 @@ and open the template in the editor.
             }
             function navigatorInfo() {
                 var msg = "navigator.appName=" + navigator.appName + "<br />" +
-                    "navigator.cookieEnabled=" + navigator.cookieEnabled + "<br />" +
-                    "navigator.platform(operating system)=" + navigator.platform + "<br />" +
-                    "navigator.userAgent=" + navigator.userAgent + "<br />";
+                        "navigator.cookieEnabled=" + navigator.cookieEnabled + "<br />" +
+                        "navigator.platform(operating system)=" + navigator.platform + "<br />" +
+                        "navigator.userAgent=" + navigator.userAgent + "<br />";
                 return msg;
             }
             function windowInfo() {
                 var br = "<br />";
                 var msg = "window.innerHeight=" + window.innerHeight + br +
-                    "window.innerWidth=" + window.innerWidth + br +
-                    "window.scrollX=" + window.scrollX + br + // Horizontal scrolling
-                    "window.scrollY=" + window.scrollY + br + // Vertical scrolling
-                    "window.screen.availHeight= " + window.screen.availHeight + br +
-                    "window.screen.availLeft= " + window.screen.availLeft + br +
-                    "window.screen.availTop= " + window.screen.availTop + br +
-                    "window.screen.availWidth= " + window.screen.availWidth + br +
-                    "window.screen.colorDepth= " + window.screen.colorDepth + br +
-                    "window.screen.height= " + window.screen.height + br +
-                    "window.screen.pixelDepth= " + window.screen.pixelDepth + br +
-                    "window.screen.width= " + window.screen.width;
+                        "window.innerWidth=" + window.innerWidth + br +
+                        "window.scrollX=" + window.scrollX + br + // Horizontal scrolling
+                        "window.scrollY=" + window.scrollY + br + // Vertical scrolling
+                        "window.screen.availHeight= " + window.screen.availHeight + br +
+                        "window.screen.availLeft= " + window.screen.availLeft + br +
+                        "window.screen.availTop= " + window.screen.availTop + br +
+                        "window.screen.availWidth= " + window.screen.availWidth + br +
+                        "window.screen.colorDepth= " + window.screen.colorDepth + br +
+                        "window.screen.height= " + window.screen.height + br +
+                        "window.screen.pixelDepth= " + window.screen.pixelDepth + br +
+                        "window.screen.width= " + window.screen.width;
                 return msg;
             }
-            function init() {
+
+            window.addEventListener('load', function () {
                 var msg = poplinks();
-            }
-            window.addEventListener("load", init);
+            });
         </script>
     </head>
     <body>
@@ -119,77 +123,88 @@ and open the template in the editor.
             </h1>
         </header>
         <nav>
-            
+
         </nav>
         <aside>
-            
+
         </aside>
         <main>
-            <h2>BIOS 5 Migration</h2>
-            <h3>
-                ArcGIS Server 10.5
-                <a href="https://r1.dfg.ca.gov/arcgis/manager/">Manager</a>
-                <a href="https://r1.dfg.ca.gov/arcgis/">REST</a>
-            </h3>
-            <h3>
-                Proxy Test
-                <a href="https://r1.dfg.ca.gov/beta/proxy.ashx?https://r1.dfg.ca.gov/arcgis/rest/services/Base_Maps/GeoReference/MapServer?f=pjson">GeoReference</a>
-                <a href="https://r1.dfg.ca.gov/beta/proxy.ashx?https://r1.dfg.ca.gov/arcgis/rest/services/Project_BIOS_Secure/q_BIOS_Secure_polygons00/MapServer/3?f=pjson">CNDDB</a>
-                <a href="https://r1.dfg.ca.gov/beta/proxy.ashx?https://services.gis.ca.gov/arcgis/rest/services/Boundaries/CA_School_Districts/MapServer?f=pjson">Public</a>
-            </h3>
-            <h3>
-                Datasets Updated 2017-MAR
-                <a href="https://r1.dfg.ca.gov/beta/?al=ds778&log=off&msg=on">Public</a>
-                <a href="https://r1.dfg.ca.gov/bios/?al=ds8&dslist=45,85,704,705,1002,1354,725,726">Secure</a>
-            </h3>
-            <h3>
-                ACE
-                <a href="https://r1.dfg.ca.gov/ace">Prod5</a>
-            </h3>
-            <h3>
-                BIOS
-                <a href="https://r1.dfg.ca.gov/beta/?bl=OpenStreetMap&zl=8&log=off&msg=on">Staging5</a>
-                <a href="https://r1.dfg.ca.gov/bios?bl=Streets&zl=8">Prod5</a>
-            </h3>
-            <h3>
-                CNDDB
-                <a href="https://r1.dfg.ca.gov/beta/?al=ds45&dslist=85,704,705,1002,1354&log=off&msg=on">Staging5</a>
-                <a href="https://r1.dfg.ca.gov/bios/?al=ds45&dslist=85,704,705,1002,1354&log=off&msg=on">Prod5</a>
-            </h3>
-            <h3>
-                Quick Viewer
-                <a href="https://r1.dfg.ca.gov/beta/?tool=cnddbQuick&log=off&msg=on">Staging5</a>
-                <a href="https://r1.dfg.ca.gov/bios?tool=cnddbQuick">Prod5</a>
-            </h3>
-            <h3>
-                Fishing Guide
-                <a href="https://r1.dfg.ca.gov/beta/?viewer=fishing&log=off&msg=on">Staging5</a>
-                <a href="https://r1.dfg.ca.gov/fishing">Prod5</a>
-            </h3>
-            <h3>
-                Lands
-                <a href="https://r1.dfg.ca.gov/lands">Prod5</a>
-            </h3>
-            <h3>
-                Marine
-                <a href="https://r1.dfg.ca.gov/marine">Prod5</a>
-            </h3>
-            <h3>
-                RareFind5
-                <a href="https://r1.dfg.ca.gov/rarefind/view/rarefind.aspx">Prod5</a>
-            </h3>
+            <h2>WWW Links</h2>
             <ol>
+                <li><a href="http://www.arcgis.com/" title="AGOL"></a></li>
+                <li><a href="https://developers.arcgis.com" title="ArcDev"></a></li>
+                <li><a href="https://desktop.arcgis.com/en/" title="ArcDesktop"></a></li>
+                <li><a href="https://pro.arcgis.com/en/pro-app/help/main/welcome-to-the-arcgis-pro-app-help.htm"
+                       title="ArcInfo"></a></li>
+                <li><a href="https://anaconda.org/" title="Anaconda"></a></li>
+                <li><a href="https://trust.arcgis.com/en/" title="ArcGIS Trust Center"></a></li>
+                <li><a href="https://portal.azure.com/#dashboard" title="Azure"></a></li>
+                <li><a href="https://account.activedirectory.windowsazure.com/r/#/profile" title="AzureAD Profile"></a></li>
+                <li><a href="http://www.caltravelstore.com/" title="CalTravelStore"></a></li>
+                <li><a href="https://www.sco.ca.gov/calaters_global.html" title="CalATERS Global"></a></li>
+                <li><a href="http://www.calhr.ca.gov/employees/pages/travel-reimbursements.aspx"
+                       title="CalHR Travel Reimbursements"></a></li>
+                <li><a href="http://hrmanual.calhr.ca.gov/Home/ManualItem/1/2203" title="Travel Timeframes"></a></li>
+                <li><a href="https://github.com/Office-of-Digital-Innovation" title="CA State Templates"></a></li>
+                <li><a href="https://data-cdfw.opendata.arcgis.com/" title="CDFW Open Data"></a></li>
+                <li><a href="https://data.cnra.ca.gov/" data-title="CNRA Open Data"></a></li>
+                <li><a href="https://data.ca.gov/" data-title="California Open Data Portal"></a></li>
+                <li><a href="https://creativecommons.org/licenses/by/2.0/" title="Creative Commons"></a></li>
+                <li><a href="https://dnn-dfginter.ad.dfg.ca.gov/Data/Dean" title="DNN"></a></li>
+                <li><a href="https://www.esri.com/en-us/home" title="Esri"></a></li>
+                <li><a href="https://events.esri.com/" title="Esri Events"></a></li>
+                <li><a href="https://ftp.wildlife.ca.gov/" title="FTPS"></a></li>
+                <li><a href="https://git-scm.com/" title="Git"></a></li>
+                <li><a href="https://community.esri.com/" title="GeoNet"></a></li>
+                <li><a href="http://dfgintranet/portal/" title="Intranet"></a></li>
+                <li><a href="https://my.esri.com/welcome" title="MyEsri"></a></li>
+                <li><a href="https://cdfwsp.wildlife.ca.gov/sites/DTD/OCAB/SitePages/Home.aspx" title="OCAB"></a></li>
+                <li><a href="https://cdfw-my.sharepoint.com/personal/dean_chiang_wildlife_ca_gov/" title="OneNote"></a></li>
+                <li><a href="https://outlook.office365.com/owa/" title="Outlook"></a></li>
+                <li><a href="https://outlook.office365.com/owa/" title="OWA"></a></li>
+                <li><a href="https://cdfw.sharepoint.com/SitePages/Home.aspx" title="SharePoint"></a></li>
+                <li><a href="https://bitbucket.org/"></a></li>
+                <li><a href="https://github.com/"></a></li>
+                <li><a href="https://github.com/esri"></a></li>
+                <li><a href="https://esri.github.io"></a></li>
+                <li><a href="https://r-arcgis.github.io/" data-title="R – ArcGIS"></a></li>
+                <li><a href="https://gitlab.com/"></a></li>
+                <li><a href="https://visualstudio.com/"></a></li>
+                <li><a href="https://dfgchiang.visualstudio.com/_projects" title="visualstudio.com/dfgchiang"></a></li>
+                <li><a href="https://r9gis.visualstudio.com/_projects" title="vs.com/r9gis"></a></li>
+                <li><a href="https://github.com/biosgis"></a></li>
+                <li><a href="https://github.com/dfgchiang"></a></li>
+                <li><a href="https://github.com/r9gis"></a></li>
+                <li><a href="https://biosbeta.azurewebsites.net"></a></li>
+                <li><a href="https://biosgis.azurewebsites.net"></a></li>
+                <li><a href="https://bioslist.azurewebsites.net"></a></li>
+                <li><a href="https://dfgchiang.azurewebsites.net"></a></li>
+                <li><a href="https://dfgchiang.bitbucket.io"></a></li>
+                <li><a href="https://dfgchiang.github.io"></a></li>
+                <li><a href="https://biosgis.github.io"></a></li>
+                <li><a href="https://biosgis.gitlab.io"></a></li>
+                <li><a href="https://biosgis.gitlab.io/habitrak"></a></li>
+                <li><a href="https://r9gis.github.io"></a></li>
+                <li><a href="https://aiosgit.github.io"></a></li>
+                <li><a href="https://www.w3schools.com/tags/ref_urlencode.asp" title="ASCII Code"></a></li>
+                <li><a href="https://developers.arcgis.com/javascript/latest/guide/esri-icon-font/" title="Esri Icon Font"></a></li>
+                <li><a href="https://developers.arcgis.com/javascript/latest/guide/cors/index.html" title="CORS"></a></li>
+                <li><a href="https://developers.google.com/chart/" title="Google Chart"></a></li>
+                <li><a href="http://www.chartjs.org/"></a></li>
+                <li><a href="https://d3js.org/"></a></li>
+                <li><a href="https://www.test-cors.org/"></a></li>
+                <li><a href="https://jsonlint.com/"></a></li>
+                <li><a href="https://www.w3schools.com/js/js_reserved.asp" title="JavaScript Reserved Words"></a></li>
             </ol>
         </main>
         <footer>
             <div style="float: right;">
-                <a href="mail:dean.chiang@wildlife.ca.gov">dean.chiang@wildlife.ca.gov</a>
+                <a href="mail:dfgchiang@gmail.com">dfgchiang@gmail.com</a>
                 &copy;
                 <script>
                     document.write(document.lastModified);
                 </script>
             </div>
         </footer>
-        <div></div>
     </body>
 </html>
